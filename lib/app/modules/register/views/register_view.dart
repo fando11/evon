@@ -140,6 +140,7 @@ class RegisterView extends GetView<RegisterController> {
                         GestureDetector(
                           onTap: () {
                             Get.toNamed(Routes.LOGIN);
+                            Get.delete<RegisterController>();
                           },
                           child: Text(
                             "Log in",

@@ -100,8 +100,8 @@ class LoginView extends GetView<LoginController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Image.network(
-                            "https://www.shareicon.net/data/128x128/2015/09/16/101969_facebook_512x512.png",
+                          Image(
+                            image: AssetImage('assets/images/fbIcon.PNG'),
                             width: 40,
                             height: MediaQuery.of(context).size.width,
                           ),
@@ -124,8 +124,8 @@ class LoginView extends GetView<LoginController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Image.network(
-                            "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png",
+                          Image(
+                            image: AssetImage('assets/images/googleIcon.PNG'),
                             width: 40,
                             height: MediaQuery.of(context).size.width,
                           ),
@@ -154,6 +154,7 @@ class LoginView extends GetView<LoginController> {
                         GestureDetector(
                           onTap: () {
                             Get.toNamed(Routes.REGISTER);
+                            Get.delete<LoginController>();
                           },
                           child: Text(
                             "Sign up",
